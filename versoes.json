@@ -1,0 +1,23 @@
+{
+  "versoes": [
+    {
+      "tag": "v1.0.1",
+      "versao": "1.0.1",
+      "data": "2026-10-30",
+      "novidades": "",
+      "arquivos": {
+        "mac": {
+          "arquivo": "AvancaSign-Mac.zip",
+          "tamanho": 36317103,
+          "sha256": "d6fad62e2d2692fdeb1133053bfe664516010a4f6dc50f990f38c63f21dcd54f"
+        },
+        "windows": {
+          "arquivo": "AvancaSign.exe",
+          "tamanho": 38579727,
+          "sha256": "211a0a45c0cd333c97f69e457807711ad8a8c3074eb8afc26d969a309330e376"
+        }
+      },
+      "guia": null
+    }
+  ]
+}

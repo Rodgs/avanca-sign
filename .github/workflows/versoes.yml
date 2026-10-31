@@ -1,0 +1,41 @@
+# versoes.yml · Avança Sign · lista das versões publicadas · 1.0-20261030-256
+# A cada versão publicada, editada ou apagada nas Releases, grava o versoes.json com o que a página oficial
+# (https://avancasefin.com.br/avanca-sign) mostra: versão, data de Belém, novidades e, de cada instalador, o nome, o tamanho e o
+# SHA-256 calculado pelo próprio GitHub. A página lê este arquivo, e não a API do GitHub, que limita consultas sem login.
+# Usa só a chave temporária da própria execução (GITHUB_TOKEN), com permissão de escrita só neste repositório.
+name: Lista das versões
+on:
+  release:
+    types: [published, edited, deleted, unpublished]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: versoes
+  cancel-in-progress: false
+jobs:
+  versoes:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Montar o versoes.json
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api "repos/${GITHUB_REPOSITORY}/releases?per_page=30" > /tmp/releases.json
+          jq '{versoes: [ .[] | select((.draft|not) and (.prerelease|not)) | select(.tag_name|test("^v?[0-9]+(\\.[0-9]+){0,3}$"))
+                | { tag: .tag_name, versao: (.tag_name|ltrimstr("v")), data: (if .published_at then (.published_at|fromdateiso8601 - 10800|strftime("%Y-%m-%d")) else "" end), novidades: ((.body // "")[0:4000]),
+                    arquivos: ( [ .assets[] | select(.name=="AvancaSign.exe" or .name=="AvancaSign-Mac.zip")
+                                  | select((.digest // "")|test("^sha256:[0-9a-f]{64}$"))
+                                  | { key: (if .name=="AvancaSign.exe" then "windows" else "mac" end),
+                                      value: {arquivo: .name, tamanho: .size, sha256: (.digest|ltrimstr("sha256:"))} } ] | from_entries ),
+                    guia: ([ .assets[] | select(.name|test("\\.pdf$";"i")) | .name ][0] // null) } ][0:10] }' /tmp/releases.json > versoes.json
+          cat versoes.json
+      - name: Gravar se mudou
+        run: |
+          if git diff --quiet -- versoes.json && git ls-files --error-unmatch versoes.json >/dev/null 2>&1; then echo "Sem mudança."; exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add versoes.json
+          git commit -m "Lista das versões atualizada"
+          git push

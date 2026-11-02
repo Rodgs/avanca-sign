@@ -1,4 +1,4 @@
-# versoes.yml · Avança Sign · lista das versões publicadas · 1.0-20261030-256
+# versoes.yml · Avança Sign · lista das versões publicadas · 1.1-20261101-15
 # A cada versão publicada, editada ou apagada nas Releases, grava o versoes.json com o que a página oficial
 # (https://avancasefin.com.br/avanca-sign) mostra: versão, data de Belém, novidades e, de cada instalador, o nome, o tamanho e o
 # SHA-256 calculado pelo próprio GitHub. A página lê este arquivo, e não a API do GitHub, que limita consultas sem login.
@@ -17,7 +17,10 @@ jobs:
   versoes:
     runs-on: ubuntu-24.04
     steps:
+      # no evento de Release o checkout padrão vem na etiqueta da versão (sem ramo); a lista é gravada sempre no main
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: main
       - name: Montar o versoes.json
         env:
           GH_TOKEN: ${{ github.token }}
@@ -38,4 +41,4 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add versoes.json
           git commit -m "Lista das versões atualizada"
-          git push
+          git push origin HEAD:main

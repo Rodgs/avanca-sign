@@ -1,6 +1,25 @@
 {
   "versoes": [
     {
+      "tag": "v1.1.1",
+      "versao": "1.1.1",
+      "data": "2026-11-03",
+      "novidades": "PDFs gerados pelo GDOC passam a ser assinados.",
+      "arquivos": {
+        "mac": {
+          "arquivo": "AvancaSign-Mac.zip",
+          "tamanho": 36322922,
+          "sha256": "a102c62ab8ad9a64c3485f871b086c5c144e61e3f5e50145c81d52726150de4e"
+        },
+        "windows": {
+          "arquivo": "AvancaSign.exe",
+          "tamanho": 38586070,
+          "sha256": "d410eaea56373dff5ee0baf950a03fc73e1d7d944d53ed63ed6a9352b8d55752"
+        }
+      },
+      "guia": null
+    },
+    {
       "tag": "v1.1",
       "versao": "1.1",
       "data": "2026-11-01",

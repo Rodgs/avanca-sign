@@ -16,9 +16,13 @@ Os instaladores ficam nas [versões publicadas](https://github.com/Rodgs/avanca-
 - Confere as assinaturas de PDFs já assinados.
 - A assinatura é feita no próprio computador. Os documentos e o PIN não passam por nenhum servidor.
 
+## Guia
+
+O **Guia completo do Avança Sign**, com as telas e o passo a passo, do download à assinatura, está em **https://avancasefin.com.br/avanca-sign/guia**.
+
 ## Conteúdo deste repositório
 
-Este repositório guarda só os instaladores oficiais e as notas de cada versão. O código-fonte não é publicado.
+Este repositório guarda só os instaladores oficiais, as notas de cada versão e as imagens do guia (pasta `guia/imagens`), que a página do guia usa. As pessoas e os documentos das imagens são fictícios. O código-fonte não é publicado.
 
 ## Direitos
 

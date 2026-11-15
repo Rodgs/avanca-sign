@@ -1,6 +1,25 @@
 {
   "versoes": [
     {
+      "tag": "v1.2",
+      "versao": "1.2",
+      "data": "2026-11-14",
+      "novidades": "Imagem própria da assinatura, escolhida ou desenhada, colocada acima do nome do signatário ou num espaço em branco do documento.",
+      "arquivos": {
+        "mac": {
+          "arquivo": "AvancaSign-Mac.zip",
+          "tamanho": 36334283,
+          "sha256": "55919773e8b1abc14d122cb040f7293013081ab2459ca9756fe49e5fd2cefa87"
+        },
+        "windows": {
+          "arquivo": "AvancaSign.exe",
+          "tamanho": 38597707,
+          "sha256": "37a0b8c9354480d922ae300c2b25d79e9284936ad1aa68310d513dd9cade75ca"
+        }
+      },
+      "guia": null
+    },
+    {
       "tag": "v1.1.1",
       "versao": "1.1.1",
       "data": "2026-11-03",

@@ -1,6 +1,25 @@
 {
   "versoes": [
     {
+      "tag": "v1.2.2",
+      "versao": "1.2.2",
+      "data": "2026-11-16",
+      "novidades": "Imagem e carimbo só no espaço em branco, sem cobrir dados, também nos relatórios do GIIG. Sem espaço acima do nome, a imagem fica logo abaixo do nome e do cargo. Escolha de Centro, Direita ou Esquerda, e a prévia diz onde a imagem ficou.",
+      "arquivos": {
+        "mac": {
+          "arquivo": "AvancaSign-Mac.zip",
+          "tamanho": 36336373,
+          "sha256": "c9a2663411c2691da678bb5c9a52f5b66c7375ad9f4836c09c0c3662391ee440"
+        },
+        "windows": {
+          "arquivo": "AvancaSign.exe",
+          "tamanho": 38597961,
+          "sha256": "bda37ec3b03d9debcbbf7a177d001ae1732c2c0dca9c3a6012c4effd84fd8fab"
+        }
+      },
+      "guia": null
+    },
+    {
       "tag": "v1.2",
       "versao": "1.2",
       "data": "2026-11-14",

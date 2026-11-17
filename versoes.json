@@ -5,7 +5,18 @@
       "versao": "1.2.3",
       "data": "2026-11-17",
       "novidades": "Com Direita ou Esquerda marcadas, a imagem fica no lado escolhido, dentro da área em branco, também em documentos com quadro na largura toda, como as notas de liquidação do GIIG.",
-      "arquivos": {},
+      "arquivos": {
+        "mac": {
+          "arquivo": "AvancaSign-Mac.zip",
+          "tamanho": 36336806,
+          "sha256": "59e3ce1c1d1ebb61f484b6dbc80b93b0774eeea1fbcf29074bff832a70dc49eb"
+        },
+        "windows": {
+          "arquivo": "AvancaSign.exe",
+          "tamanho": 38599665,
+          "sha256": "7f4b2c4f34e049ff78e953f05bb58cad1e14d9344cc465617ead9b8bb3238737"
+        }
+      },
       "guia": null
     },
     {

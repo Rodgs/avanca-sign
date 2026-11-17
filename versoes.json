@@ -1,6 +1,14 @@
 {
   "versoes": [
     {
+      "tag": "v1.2.3",
+      "versao": "1.2.3",
+      "data": "2026-11-17",
+      "novidades": "Com Direita ou Esquerda marcadas, a imagem fica no lado escolhido, dentro da área em branco, também em documentos com quadro na largura toda, como as notas de liquidação do GIIG.",
+      "arquivos": {},
+      "guia": null
+    },
+    {
       "tag": "v1.2.2",
       "versao": "1.2.2",
       "data": "2026-11-16",

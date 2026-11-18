@@ -1,6 +1,25 @@
 {
   "versoes": [
     {
+      "tag": "v1.3",
+      "versao": "1.3",
+      "data": "2026-11-18",
+      "novidades": "Aceita o certificado A1 instalado no computador, no Windows e no Mac, além do token, do cartão e da nuvem. A assinatura é feita pelo próprio sistema, sem exportar a chave.",
+      "arquivos": {
+        "mac": {
+          "arquivo": "AvancaSign-Mac.zip",
+          "tamanho": 36346791,
+          "sha256": "123267a5b838d179406069e6b93aff2d5c2379f268305b6bae391f824ce8fb1a"
+        },
+        "windows": {
+          "arquivo": "AvancaSign.exe",
+          "tamanho": 38607538,
+          "sha256": "ab886d263577d3532837765e7c9a86c8eae2735d5940092c7a6d7edad3c29da5"
+        }
+      },
+      "guia": null
+    },
+    {
       "tag": "v1.2.3",
       "versao": "1.2.3",
       "data": "2026-11-17",
